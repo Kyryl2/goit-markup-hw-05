@@ -538,12 +538,6 @@ img {
 /* #endregion-second-section */
 
 /* #region-container */
-.page-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
 
 .container {
   width: 1158px;
