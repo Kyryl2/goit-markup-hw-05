@@ -555,12 +555,12 @@ img {
   border-top: 3px solid #434455;
 }
 /* #endregion-container */
-/*#region .backdrop { 
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  opacity: 0;
+
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -573,7 +573,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  opacity: 0;
+
   min-height: 584px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -593,7 +593,6 @@ img {
   transform: translateX(-50%) translateY(-50%) scale(1);
   transition-delay: 300ms;
 }
-*/
 .modal-close-btn {
   border-radius: 50%;
   width: 24px;
@@ -612,12 +611,17 @@ img {
   background-color: #e7e9fc;
   color: #2e2f42;
 }
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   background-color: #404bbf;
-  color: #fff;
   border: none;
 }
 .close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover .close-icon,
+.modal-close-btn:focus .close-icon {
+  fill: #ffffff;
 }
 .modal-text {
   font-family: "Roboto", sans-serif;
@@ -627,11 +631,11 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 16px;
 }
 .modal-form {
 }
-.form-button {
-}
+
 .label-text {
   font-size: 12px;
   line-height: 1.17;
@@ -652,11 +656,55 @@ img {
   position: relative;
 }
 .input-common {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-common:focus {
+  border-color: #4d5ae5;
 }
 .wrapper-icon {
   position: absolute;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-common:focus .wrapper-icon {
+  fill: #4d5ae5;
+}
+.form-button {
+}
+.user-comment-wrapper {
+  margin-bottom: 16px;
+}
+.form-textarea {
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 4px;
+}
+.form-textarea:focus {
+  border-color: #4d5ae5;
+}
+.checkbox {
+  margin-bottom: 24px;
+}
+.checkbox-label {
 }
