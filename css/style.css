@@ -560,7 +560,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-
+  opacity: 0;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -573,7 +573,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-
+  opacity: 0;
   min-height: 584px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -676,11 +676,11 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-common:focus .wrapper-icon {
+.input-common:focus + .wrapper-icon,
+.input-common:checked + .wrapper-icon {
   fill: #4d5ae5;
 }
-.form-button {
-}
+
 .user-comment-wrapper {
   margin-bottom: 16px;
 }
@@ -705,6 +705,67 @@ img {
 }
 .checkbox {
   margin-bottom: 24px;
+
+  padding: 0;
 }
 .checkbox-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+}
+.checkbox-span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
+}
+.icon-checkbox {
+  fill: #f4f4fd;
+}
+.input-checkbox:checked + .checkbox-label .checkbox-span {
+  border-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+  background: #4d5ae5;
+}
+
+.checkbox-link {
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.form-button {
+  display: flex;
+  margin: auto;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
