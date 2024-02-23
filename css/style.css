@@ -465,6 +465,7 @@ img {
   text-transform: capitalize;
   color: #2e2f42;
   margin-bottom: 72px;
+  margin-top: auto;
 }
 .header-third {
   font-family: "Roboto", sans-serif;
@@ -557,6 +558,7 @@ img {
 /* #endregion-container */
 .backdrop {
   position: fixed;
+  pointer-events: none;
   top: 0;
   left: 0;
   opacity: 0;
@@ -584,6 +586,7 @@ img {
 }
 .backdrop.is-open {
   opacity: 1;
+  pointer-events: all;
   visibility: visible;
   pointer-events: initial;
   transition-delay: 0ms;
